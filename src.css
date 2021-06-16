@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+ 
+* {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Quicksand', sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+main {
+   padding: 20px;
+   overflow: auto;
+}
+
+header {
+   padding: 10px;
+   background-color: #56f07c;
+   text-align: center;
+   color: white;
+}
+
+#content {
+   float: right;
+   width: 75%;
+   padding-left: 30px;
+}
+
+aside{
+   float: left;
+   width: 25%;
+   padding-right: 15px;
+   box-sizing: 200px; 
+}
+label{
+   float: left;
+   width:45%;
+   padding-right: 15px;
+   box-sizing: 200px;
+}
+
+.asides{
+   float: left;
+   width: 50%;
+   padding-right: 15px;
+   box-sizing: 200px;
+}
+
+aside table {
+   margin: auto;
+}
+
+.card {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 15px;
+   padding: 25px;
+   padding-top: 15px;
+   margin-top: 25px;
+   background-color:rgb(241, 240, 157);
+}
+ 
+h2, h3 {
+   color: #00a2c6
+}
+
+#tb_1, #tb_2 {
+   border-radius: 10px;
+   background-color: blueviolet;
+   padding: 2px;
+   color: white;
+}
+
+#tb_1 td, #tb_2 td {
+   border-radius: 5px;
+   background-color: white;
+   padding: 5px;
+   width: 100px;
+   color:black;
+   font-size: 18px;
+   font-weight: bold;
+   text-align: center;
+}
+
+#tb_1 th, #tb_2 th {
+   font-size: 16px;
+}
+ 
+footer {
+   padding: 20px;
+   color: white;
+   background-color: #00a2c6;
+   text-align: center;
+   font-weight:bold;
+   font-size:medium;
+}
+
+p {
+   font-size: 12px;
+  font-weight:bold;
+}
+
+@media screen and (max-width: 600px) {
+   #content,
+   aside {
+       width: 100%;
+       padding: 0;
+   }
+}
+
