@@ -120,7 +120,7 @@
                         <tr>
                             <th>TDS</th>
                             <td>
-                            <a id="Tds1">0</a>
+                            <a id="tds1">0</a>
                             <div hidden="">
                             <a hidden="" id="hasil_tds1"></a>
                             <a id="hasil_tds1_baik"></a>
@@ -144,7 +144,7 @@
                         <tr>
                             <th>Keruh</th>
                             <td>
-                            <a id="keruh1">0</a>
+                            <a id="tbdt1">0</a>
                             <div hidden="">
                             <a hidden="" id="hasil_keruh1"></a>
                             <a id="hasil_keruh1_baik"></a>
@@ -170,7 +170,7 @@
                     </table>
               
             
-                            <button hidden="" id="btn1" onclick="myFunction()">Try it</button>
+                            <button id="btn1" onclick="myFunction()">Try it</button>
                             <div hidden="" style="width: 400px;height:300px; ">
                                 <canvas id="myChart"></canvas>
                             </div>
@@ -256,7 +256,7 @@
                         <tr>
                             <th>TDS</th>
                             <td>
-                            <a id="Tds2">0</a>
+                            <a id="tds2">0</a>
                             <div hidden="">
                             <a hidden="" id="hasil_tds2"></a>
                             <a id="hasil_tds2_baik"></a>
@@ -280,7 +280,7 @@
                         <tr>
                             <th>Keruh</th>
                             <td>
-                            <a id="keruh2">0</a>
+                            <a id="tbdt2">0</a>
                             <div hidden="">
                             <a hidden="" id="hasil_keruh2"></a>
                             <a id="hasil_keruh2_baik"></a>
@@ -307,7 +307,7 @@
                     
 
         
-                            <button hidden="" id="btn2" onclick="myFunction1()">Try it</button>
+                            <button id="btn2" onclick="myFunction1()">Try it</button>
             
          
                             <div hidden="" style="width: 400px;height: 300px; float: left">
@@ -376,9 +376,9 @@ document.getElementsByTagName("head")[0].appendChild(scriptTag);
 function myFunction() {
     var do1=document.getElementById("do1").innerHTML;
     var ph1=document.getElementById("ph1").innerHTML;
-    var tds1=document.getElementById("Tds1").innerHTML;
+    var tds1=document.getElementById("tds1").innerHTML;
     var suhu1=document.getElementById("suhu1").innerHTML;
-    var keruh1=document.getElementById("keruh1").innerHTML;
+    var keruh1=document.getElementById("tbdt1").innerHTML;
     var rssi1=document.getElementById("rssi1").innerHTML;
 
 
@@ -833,7 +833,7 @@ function myFunction() {
 function myFunction1() {
     var do2=document.getElementById("do2").innerHTML;
     var ph2=document.getElementById("ph2").innerHTML;
-    var tds2=document.getElementById("Tds2").innerHTML;
+    var tds2=document.getElementById("tds2").innerHTML;
     var suhu2=document.getElementById("suhu2").innerHTML;
     var keruh2=document.getElementById("keruh2").innerHTML;
     var rssi2=document.getElementById("rssi2").innerHTML;
