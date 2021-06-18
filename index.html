@@ -142,14 +142,14 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>tbdt</th>
+                            <th>keruh</th>
                             <td>
-                            <a id="tbdt">0</a>
+                            <a id="tbdt1">0</a>
                             <div hidden="">
-                            <a hidden="" id="hasil_tbdt1"></a>
-                            <a id="hasil_tbdt1_baik"></a>
-                            <a id="hasil_tbdt1_agak_keruh"></a>
-                            <a id="hasil_tbdt1_buruk"></a>
+                            <a hidden="" id="hasil_keruh1"></a>
+                            <a id="hasil_keruh1_baik"></a>
+                            <a id="hasil_keruh1_agak_keruh"></a>
+                            <a id="hasil_keruh1_buruk"></a>
                         </div>
                             </td>
                         </tr>
@@ -278,14 +278,14 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>tbdt</th>
+                            <th>keruh</th>
                             <td>
                             <a id="tbdt2">0</a>
                             <div hidden="">
-                            <a hidden="" id="hasil_tbdt2"></a>
-                            <a id="hasil_tbdt2_baik"></a>
-                            <a id="hasil_tbdt2_agak_keruh"></a>
-                            <a id="hasil_tbdt2_buruk"></a>
+                            <a hidden="" id="hasil_keruh2"></a>
+                            <a id="hasil_keruh2_baik"></a>
+                            <a id="hasil_keruh2_agak_keruh"></a>
+                            <a id="hasil_keruh2_buruk"></a>
                         </div>
                             </td>
                         </tr>
@@ -378,7 +378,7 @@ function myFunction() {
     var ph1=document.getElementById("ph1").innerHTML;
     var tds1=document.getElementById("tds1").innerHTML;
     var suhu1=document.getElementById("suhu1").innerHTML;
-    var tbdt1=document.getElementById("tbdt1").innerHTML;
+    var keruh1=document.getElementById("tbdt1").innerHTML;
     var rssi1=document.getElementById("rssi1").innerHTML;
 
 
@@ -515,24 +515,24 @@ function myFunction() {
 
     //PERHITUNGAN NILAI KERUH
 
-            if(tbdt1 <= 25){
-                $('#hasil_tbdt1_baik').html('1');
-                $('#hasil_tbdt1_agak_keruh').html('0');
-                $('#hasil_tbdt1_buruk').html('0');
+            if(keruh1 <= 25){
+                $('#hasil_keruh1_baik').html('1');
+                $('#hasil_keruh1_agak_keruh').html('0');
+                $('#hasil_keruh1_buruk').html('0');
             }
-            else if (tbdt1 > 25 && tbdt1 < 30) {
-                $('#hasil_tbdt1_baik').html((30-tbdt1)/(30-25));
-                $('#hasil_tbdt1_agak_keruh').html((tbdt1-25)/(30-25));
-                $('#hasil_tbdt1_buruk').html((tbdt1-25)/(30-25));
+            else if (keruh1 > 25 && tbdt1 < 30) {
+                $('#hasil_keruh1_baik').html((30-keruh1)/(30-25));
+                $('#hasil_keruh1_agak_keruh').html((keruh1-25)/(30-25));
+                $('#hasil_keruh1_buruk').html((keruh1-25)/(30-25));
             }
-            else if (tbdt1 >=30) {
-                $('#hasil_tbdt1_baik').html('0');
-                $('#hasil_tbdt1_buruk').html('1');
-                if (tbdt1 >= 30 && tbdt1 <= 32) {
-                    $('#hasil_tbdt1_agak_keruh').html((32-tbdt1)/(32-25));
+            else if (keruh1 >=30) {
+                $('#hasil_keruh1_baik').html('0');
+                $('#hasil_keruh1_buruk').html('1');
+                if (keruh1 >= 30 && keruh1 <= 32) {
+                    $('#hasil_keruh1_agak_keruh').html((32-keruh1)/(32-25));
                 }
-                else if (tbdt1 > 32) {
-                    $('#hasil_tbdt1_agak_keruh').html('0');
+                else if (keruh1 > 32) {
+                    $('#hasil_keruh1_agak_keruh').html('0');
 
                 }
             }else{
@@ -554,114 +554,114 @@ function myFunction() {
     var hasil_tds1_baik=document.getElementById("hasil_tds1_baik").innerHTML;
     var hasil_tds1_cukup_buruk=document.getElementById("hasil_tds1_cukup_buruk").innerHTML;
     var hasil_tds1_buruk=document.getElementById("hasil_tds1_buruk").innerHTML;
-    var hasil_tbdt1_baik=document.getElementById("hasil_tbdt1_baik").innerHTML;
-    var hasil_tbdt1_agak_keruh=document.getElementById("hasil_tbdt1_agak_keruh").innerHTML;
-    var hasil_tbdt1_buruk=document.getElementById("hasil_tbdt1_buruk").innerHTML;
+    var hasil_keruh1_baik=document.getElementById("hasil_keruh1_baik").innerHTML;
+    var hasil_keruh1_agak_keruh=document.getElementById("hasil_keruh1_agak_keruh").innerHTML;
+    var hasil_keruh1_buruk=document.getElementById("hasil_keruh1_buruk").innerHTML;
 
-    rl1 = new Array(hasil_do1_baik,hasil_ph1_netral,hasil_suhu1_normal,hasil_tds1_baik,hasil_tbdt1_agak_keruh);
+    rl1 = new Array(hasil_do1_baik,hasil_ph1_netral,hasil_suhu1_normal,hasil_tds1_baik,hasil_keruh1_agak_keruh);
     nilai_r1=Math.min.apply(null, rl1);
     $('#r1').html(nilai_r1.toFixed(2));
     $('#r_1').html(nilai_r1.toFixed(2));
 
-    rl2 = new Array(hasil_do1_baik,hasil_ph1_netral,hasil_suhu1_dingin,hasil_tds1_baik,hasil_tbdt1_baik);
+    rl2 = new Array(hasil_do1_baik,hasil_ph1_netral,hasil_suhu1_dingin,hasil_tds1_baik,hasil_keruh1_baik);
     nilai_r2=Math.min.apply(null, rl2);
     $('#r2').html(nilai_r2.toFixed(2));
     $('#r_2').html(nilai_r2.toFixed(2));
 
 
 
-    rl3 = new Array(hasil_do1_baik,hasil_ph1_netral,hasil_suhu1_normal,hasil_tds1_cukup_buruk,hasil_tbdt1_baik);
+    rl3 = new Array(hasil_do1_baik,hasil_ph1_netral,hasil_suhu1_normal,hasil_tds1_cukup_buruk,hasil_keruh1_baik);
     nilai_r3=Math.min.apply(null, rl3);
     $('#r3').html(nilai_r3.toFixed(2));
     $('#r_3').html(nilai_r3.toFixed(2));
 
 
-    rl4 = new Array(hasil_do1_baik,hasil_ph1_asam,hasil_suhu1_normal,hasil_tds1_baik,hasil_tbdt1_baik);
+    rl4 = new Array(hasil_do1_baik,hasil_ph1_asam,hasil_suhu1_normal,hasil_tds1_baik,hasil_keruh1_baik);
     nilai_r4=Math.min.apply(null, rl4);
     $('#r4').html(nilai_r4.toFixed(2));
     $('#r_4').html(nilai_r4.toFixed(2));
 
 
-    rl5 = new Array(hasil_do1_baik,hasil_ph1_netral,hasil_suhu1_normal,hasil_tds1_baik,hasil_tbdt1_baik);
+    rl5 = new Array(hasil_do1_baik,hasil_ph1_netral,hasil_suhu1_normal,hasil_tds1_baik,hasil_keruh1_baik);
     nilai_r5=Math.min.apply(null, rl5);
     $('#r5').html(nilai_r5.toFixed(2));
     $('#r_5').html(nilai_r5.toFixed(2));
 
 
-    rl6 = new Array(hasil_do1_baik,hasil_ph1_netral,hasil_suhu1_panas,hasil_tds1_baik,hasil_tbdt1_baik);
+    rl6 = new Array(hasil_do1_baik,hasil_ph1_netral,hasil_suhu1_panas,hasil_tds1_baik,hasil_keruh1_baik);
     nilai_r6=Math.min.apply(null, rl6);
     $('#r6').html(nilai_r6.toFixed(2));
     $('#r_6').html(nilai_r6.toFixed(2));
 
 
-    rl7 = new Array(hasil_do1_baik,hasil_ph1_basa,hasil_suhu1_normal,hasil_tds1_baik,hasil_tbdt1_baik);
+    rl7 = new Array(hasil_do1_baik,hasil_ph1_basa,hasil_suhu1_normal,hasil_tds1_baik,hasil_keruh1_baik);
     nilai_r7=Math.min.apply(null, rl7);
     $('#r7').html(nilai_r7.toFixed(2));
     $('#r_7').html(nilai_r7.toFixed(2));
 
-    rl8 = new Array(hasil_do1_buruk,hasil_ph1_asam,hasil_suhu1_dingin,hasil_tds1_cukup_buruk,hasil_tbdt1_buruk);
+    rl8 = new Array(hasil_do1_buruk,hasil_ph1_asam,hasil_suhu1_dingin,hasil_tds1_cukup_buruk,hasil_keruh1_buruk);
     nilai_r8=Math.min.apply(null, rl8);
     $('#r8').html(nilai_r8.toFixed(2));
     $('#r_8').html(nilai_r8.toFixed(2));
 
-    rl9 = new Array(hasil_do1_buruk,hasil_ph1_basa,hasil_suhu1_dingin,hasil_tds1_cukup_buruk,hasil_tbdt1_agak_keruh);
+    rl9 = new Array(hasil_do1_buruk,hasil_ph1_basa,hasil_suhu1_dingin,hasil_tds1_cukup_buruk,hasil_keruh1_agak_keruh);
     nilai_r9=Math.min.apply(null, rl9);
     $('#r9').html(nilai_r9.toFixed(2));
     $('#r_9').html(nilai_r9.toFixed(2));
 
-    rl10 = new Array(hasil_do1_baik,hasil_ph1_asam,hasil_suhu1_panas,hasil_tds1_cukup_buruk,hasil_tbdt1_agak_keruh);
+    rl10 = new Array(hasil_do1_baik,hasil_ph1_asam,hasil_suhu1_panas,hasil_tds1_cukup_buruk,hasil_keruh1_agak_keruh);
     nilai_r10=Math.min.apply(null, rl10);
     $('#r10').html(nilai_r10.toFixed(2));
     $('#r_10').html(nilai_r10.toFixed(2));
 
-    rl11 = new Array(hasil_do1_buruk,hasil_ph1_basa,hasil_suhu1_panas,hasil_tds1_cukup_buruk,hasil_tbdt1_agak_keruh);
+    rl11 = new Array(hasil_do1_buruk,hasil_ph1_basa,hasil_suhu1_panas,hasil_tds1_cukup_buruk,hasil_keruh1_agak_keruh);
     nilai_r11=Math.min.apply(null, rl11);
     $('#r11').html(nilai_r11.toFixed(2));
     $('#r_11').html(nilai_r11.toFixed(2));
 
 
-    rl12 = new Array(hasil_do1_cukup_baik,hasil_ph1_basa,hasil_suhu1_dingin,hasil_tds1_cukup_buruk,hasil_tbdt1_agak_keruh);
+    rl12 = new Array(hasil_do1_cukup_baik,hasil_ph1_basa,hasil_suhu1_dingin,hasil_tds1_cukup_buruk,hasil_keruh1_agak_keruh);
     nilai_r12=Math.min.apply(null, rl12);
     $('#r12').html(nilai_r12.toFixed(2));
     $('#r_12').html(nilai_r12.toFixed(2));
 
 
-    rl13 = new Array(hasil_do1_buruk,hasil_ph1_asam,hasil_suhu1_dingin,hasil_tds1_buruk,hasil_tbdt1_buruk);
+    rl13 = new Array(hasil_do1_buruk,hasil_ph1_asam,hasil_suhu1_dingin,hasil_tds1_buruk,hasil_keruh1_buruk);
     nilai_r13=Math.min.apply(null, rl13);
     $('#r13').html(nilai_r13.toFixed(2));
     $('#r_13').html(nilai_r13.toFixed(2));
 
 
-    rl14 = new Array(hasil_do1_buruk,hasil_ph1_basa,hasil_suhu1_dingin,hasil_tds1_cukup_buruk,hasil_tbdt1_agak_keruh);
+    rl14 = new Array(hasil_do1_buruk,hasil_ph1_basa,hasil_suhu1_dingin,hasil_tds1_cukup_buruk,hasil_keruh1_agak_keruh);
     nilai_r14=Math.min.apply(null, rl14);
     $('#r14').html(nilai_r14.toFixed(2));
     $('#r_14').html(nilai_r14.toFixed(2));
 
 
-    rl15 = new Array(hasil_do1_cukup_baik,hasil_ph1_asam,hasil_suhu1_panas,hasil_tds1_buruk,hasil_tbdt1_buruk);
+    rl15 = new Array(hasil_do1_cukup_baik,hasil_ph1_asam,hasil_suhu1_panas,hasil_tds1_buruk,hasil_keruh1_buruk);
     nilai_r15=Math.min.apply(null, rl15);
     $('#r15').html(nilai_r15.toFixed(2));
     $('#r_15').html(nilai_r15.toFixed(2));
 
 
-    rl16 = new Array(hasil_do1_buruk,hasil_ph1_netral,hasil_suhu1_panas,hasil_tds1_buruk,hasil_tbdt1_buruk);
+    rl16 = new Array(hasil_do1_buruk,hasil_ph1_netral,hasil_suhu1_panas,hasil_tds1_buruk,hasil_keruh1_buruk);
     nilai_r16=Math.min.apply(null, rl16);
     $('#r16').html(nilai_r16.toFixed(2));
     $('#r_16').html(nilai_r16.toFixed(2));
 
 
-    rl17 = new Array(hasil_do1_buruk,hasil_ph1_basa,hasil_suhu1_dingin,hasil_tds1_buruk,hasil_tbdt1_buruk);
+    rl17 = new Array(hasil_do1_buruk,hasil_ph1_basa,hasil_suhu1_dingin,hasil_tds1_buruk,hasil_keruh1_buruk);
     nilai_r17=Math.min.apply(null, rl17);
     $('#r17').html(nilai_r17.toFixed(2));
     $('#r_17').html(nilai_r17.toFixed(2));
 
 
-    rl18 = new Array(hasil_do1_cukup_baik,hasil_ph1_basa,hasil_suhu1_panas,hasil_tds1_buruk,hasil_tbdt1_buruk);
+    rl18 = new Array(hasil_do1_cukup_baik,hasil_ph1_basa,hasil_suhu1_panas,hasil_tds1_buruk,hasil_keruh1_buruk);
     nilai_r18=Math.min.apply(null, rl18);
     $('#r18').html(nilai_r18.toFixed(2));
     $('#r_18').html(nilai_r18.toFixed(2));
 
-    rl19 = new Array(hasil_do1_buruk,hasil_ph1_basa,hasil_suhu1_panas,hasil_tds1_cukup_buruk,hasil_tbdt1_agak_keruh);
+    rl19 = new Array(hasil_do1_buruk,hasil_ph1_basa,hasil_suhu1_panas,hasil_tds1_cukup_buruk,hasil_keruh1_agak_keruh);
     nilai_r19=Math.min.apply(null, rl19);
     $('#r19').html(nilai_r19.toFixed(2));
     $('#r_19').html(nilai_r19.toFixed(2));
@@ -796,7 +796,7 @@ function myFunction() {
                 labels: ["DO", "pH", "TDS", "Suhu", "Keruh", "Rssi"],
                 datasets: [{
                     label: '',
-                    data: [do1, ph1, tds1, suhu1, tbdt1, rssi1],
+                    data: [do1, ph1, tds1, suhu1, keruh1, rssi1],
                     
                     borderWidth: 1
                 }]
@@ -835,7 +835,7 @@ function myFunction1() {
     var ph2=document.getElementById("ph2").innerHTML;
     var tds2=document.getElementById("tds2").innerHTML;
     var suhu2=document.getElementById("suhu2").innerHTML;
-    var keruh2=document.getElementById("keruh2").innerHTML;
+    var keruh2=document.getElementById("tbdt2").innerHTML;
     var rssi2=document.getElementById("rssi2").innerHTML;
     
 //-------------------------------PERHITUNGAN NILAI DO, Ph, Suhu, TDS, dan Keruh--------------------------------------
