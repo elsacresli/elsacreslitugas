@@ -144,7 +144,7 @@
                         <tr>
                             <th>Keruh</th>
                             <td>
-                            <a id="keruh1">0</a>
+                            <a id="tbdt1">0</a>
                             <div hidden="">
                             <a hidden="" id="hasil_keruh1"></a>
                             <a id="hasil_keruh1_baik"></a>
