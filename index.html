@@ -378,7 +378,7 @@ function myFunction() {
     var ph1=document.getElementById("ph1").innerHTML;
     var tds1=document.getElementById("tds1").innerHTML;
     var suhu1=document.getElementById("suhu1").innerHTML;
-    var keruh1=document.getElementById("tbdt1").innerHTML;
+    var Tbdt1=document.getElementById("tbdt1").innerHTML;
     var rssi1=document.getElementById("rssi1").innerHTML;
 
 
@@ -515,23 +515,23 @@ function myFunction() {
 
     //PERHITUNGAN NILAI KERUH
 
-            if(keruh1 <= 25){
+            if(Tbdt1 <= 25){
                 $('#hasil_keruh1_baik').html('1');
                 $('#hasil_keruh1_agak_keruh').html('0');
                 $('#hasil_keruh1_buruk').html('0');
             }
-            else if (keruh1 > 25 && keruh1 < 30) {
-                $('#hasil_keruh1_baik').html((30-keruh1)/(30-25));
-                $('#hasil_keruh1_agak_keruh').html((keruh1-25)/(30-25));
-                $('#hasil_keruh1_buruk').html((keruh1-25)/(30-25));
+            else if (Tbdt1 > 25 && Tbdt1 < 30) {
+                $('#hasil_keruh1_baik').html((30-Tbdt1)/(30-25));
+                $('#hasil_keruh1_agak_keruh').html((Tbdt1-25)/(30-25));
+                $('#hasil_keruh1_buruk').html((Tbdt1-25)/(30-25));
             }
-            else if (keruh1 >=30) {
+            else if (Tbdt1 >=30) {
                 $('#hasil_keruh1_baik').html('0');
                 $('#hasil_keruh1_buruk').html('1');
-                if (keruh1 >= 30 && keruh1 <= 32) {
-                    $('#hasil_keruh1_agak_keruh').html((32-keruh1)/(32-25));
+                if (Tbdt1 >= 30 && Tbdt1 <= 32) {
+                    $('#hasil_keruh1_agak_keruh').html((32-Tbdt1)/(32-25));
                 }
-                else if (keruh1 > 32) {
+                else if (Tbdt1 > 32) {
                     $('#hasil_keruh1_agak_keruh').html('0');
 
                 }
@@ -796,7 +796,7 @@ function myFunction() {
                 labels: ["DO", "pH", "TDS", "Suhu", "Keruh", "Rssi"],
                 datasets: [{
                     label: '',
-                    data: [do1, ph1, tds1, suhu1, keruh1, rssi1],
+                    data: [do1, ph1, tds1, suhu1, Tbdt1, rssi1],
                     
                     borderWidth: 1
                 }]
